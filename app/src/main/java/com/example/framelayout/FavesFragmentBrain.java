@@ -1,5 +1,6 @@
 package com.example.framelayout;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -15,57 +16,65 @@ import org.w3c.dom.Text;
 
 public class FavesFragmentBrain extends Fragment {
 
-TextView textTitle,textBody;
-LinearLayout layout;
+    TextView textTitle, textBody;
+    LinearLayout layout;
 
-        @Override
-        public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.favesfragment, container, false);
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View rootView = inflater.inflate(R.layout.favesfragment, container, false);
 
-            layout = rootView.findViewById(R.id.linearLayoutAncho);
+        layout = rootView.findViewById(R.id.linearLayoutAncho);
 
-            textTitle = rootView.findViewById(R.id.favesTitle);
-            textBody = rootView.findViewById(R.id.favesInformation);
+        textTitle = rootView.findViewById(R.id.favesTitle);
+        textBody = rootView.findViewById(R.id.favesInformation);
 
 
-            return rootView;
+        return rootView;
 
-        }
+    }
 
-public void setTitle(String title)
-{
-    textTitle.setText(title);
+    public void setTitle(String title) {
+        textTitle.setText(title);
 
-}
+    }
 
-    public void setBody(String title)
-    {
+    public void setBody(String title) {
         textBody.setText(title);
 
     }
 
-    public  boolean findOutIfVisible() {
-        if (layout.getVisibility()==View.VISIBLE) {
+    public boolean findOutIfVisible() {
+        if (layout.getVisibility() == View.VISIBLE) {
             return true;
-        }
-        else{
-        return false;
+        } else {
+            return false;
         }
     }
 
-public void changeFocus1()
-{
+    public boolean isorientationLandscape() {
+        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            return true;
+        } else {
 
-    if(layout.getVisibility()==View.VISIBLE) {
-        layout.setVisibility(View.INVISIBLE);
+            return false;
+        }
     }
-    else
-    {
+
+
+    public void changeFocus1() {
+
+        if (layout.getVisibility() == View.VISIBLE) {
+            layout.setVisibility(View.INVISIBLE);
+        } else {
+            layout.setVisibility(View.VISIBLE);
+
+        }
+    }
+
+    public void makeVisiable() {
         layout.setVisibility(View.VISIBLE);
 
     }
 }
-
-        }
 
 

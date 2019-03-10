@@ -51,40 +51,48 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
 
 
-        switch (v.getId()) {
+        switch (v.getId())
+        {
             case R.id.textNum1: {
                 favesFragment.setTitle("This is Title 1");
                 favesFragment.setBody("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tincidunt, tellus sed feugiat tincidunt, justo risus auctor nunc, nec imperdiet tortor sem vitae ante. Aenean vitae tincidunt urna, gravida feugiat nibh. Morbi pretium magna arcu, ut volutpat nulla placerat nec. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam placerat lacus a consectetur lacinia. Aenean tempus, nibh nec commodo mattis, est diam sagittis turpis, ut accumsan urna lacus at urna. Ut pulvinar imperdiet elit a dictum.");
-                favesFragment.changeFocus1();
-
-            }
-            break;
+                if (favesFragment.isorientationLandscape() == true) {
+                    favesFragment.makeVisiable();
+                }else {
+                    favesFragment.changeFocus1();
+                }
+            }break;
 
             case R.id.textNum2: {
                 favesFragment.setTitle("This is Title 2");
                 favesFragment.setBody("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tincidunt, tellus sed feugiat tincidunt, justo risus auctor nunc, nec imperdiet tortor sem vitae ante. Aenean vitae tincidunt urna, gravida feugiat nibh. Morbi pretium magna arcu, ut volutpat nulla placerat nec. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam placerat lacus a consectetur lacinia. Aenean tempus, nibh nec commodo mattis, est diam sagittis turpis, ut accumsan urna lacus at urna. Ut pulvinar imperdiet elit a dictum.");
-                favesFragment.changeFocus1();
-
-
+                if (favesFragment.isorientationLandscape() == true) {
+                    favesFragment.makeVisiable();
+                }else {
+                    favesFragment.changeFocus1();
+                }
+                break;
             }
-            break;
-
             case R.id.textNum3: {
                 favesFragment.setTitle("This is Title 3");
                 favesFragment.setBody("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tincidunt, tellus sed feugiat tincidunt, justo risus auctor nunc, nec imperdiet tortor sem vitae ante. Aenean vitae tincidunt urna, gravida feugiat nibh. Morbi pretium magna arcu, ut volutpat nulla placerat nec. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam placerat lacus a consectetur lacinia. Aenean tempus, nibh nec commodo mattis, est diam sagittis turpis, ut accumsan urna lacus at urna. Ut pulvinar imperdiet elit a dictum.");
-                favesFragment.changeFocus1();
-
-
+                if(favesFragment.isorientationLandscape()==true) {
+                    favesFragment.makeVisiable();
+                }else {
+                    favesFragment.changeFocus1();
+                }
             }
             break;
 
             case R.id.textNum4: {
                 favesFragment.setTitle("This is Title 4");
                 favesFragment.setBody("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tincidunt, tellus sed feugiat tincidunt, justo risus auctor nunc, nec imperdiet tortor sem vitae ante. Aenean vitae tincidunt urna, gravida feugiat nibh. Morbi pretium magna arcu, ut volutpat nulla placerat nec. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam placerat lacus a consectetur lacinia. Aenean tempus, nibh nec commodo mattis, est diam sagittis turpis, ut accumsan urna lacus at urna. Ut pulvinar imperdiet elit a dictum.");
-                favesFragment.changeFocus1();
-
-            }
-            break;
+                if(favesFragment.isorientationLandscape()==true) {
+                    favesFragment.makeVisiable();
+                }else {
+                    favesFragment.changeFocus1();
+                }
+                }break;
 
         }
 
