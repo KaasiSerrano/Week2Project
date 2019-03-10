@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    android:id="@+id/linearLayoutAncho"
+    android:visibility="gone"
+    >
+    <TextView
+        android:id="@+id/favesTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Faves 1"
+        android:paddingTop="16dp"
+        android:paddingLeft="16dp"
+        android:textSize="36sp" />
+
+    <TextView
+        android:id="@+id/favesInformation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tincidunt, tellus sed feugiat tincidunt, justo risus auctor nunc, nec imperdiet tortor sem vitae ante. Aenean vitae tincidunt urna, gravida feugiat nibh. Morbi pretium magna arcu, ut volutpat nulla placerat nec. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam placerat lacus a consectetur lacinia. Aenean tempus, nibh nec commodo mattis, est diam sagittis turpis, ut accumsan urna lacus at urna. Ut pulvinar imperdiet elit a dictum."/>
+
+
+</LinearLayout>
