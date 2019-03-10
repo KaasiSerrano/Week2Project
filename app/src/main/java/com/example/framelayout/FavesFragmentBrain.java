@@ -43,9 +43,18 @@ public void setTitle(String title)
         textBody.setText(title);
 
     }
+
+    public  boolean findOutIfVisible() {
+        if (layout.getVisibility()==View.VISIBLE) {
+            return true;
+        }
+        else{
+        return false;
+        }
+    }
+
 public void changeFocus1()
 {
-    String isItVisable = String.valueOf(layout.getVisibility());
 
     if(layout.getVisibility()==View.VISIBLE) {
         layout.setVisibility(View.INVISIBLE);
@@ -55,7 +64,6 @@ public void changeFocus1()
         layout.setVisibility(View.VISIBLE);
 
     }
-    Log.d("faggot",isItVisable);
 }
 
         }

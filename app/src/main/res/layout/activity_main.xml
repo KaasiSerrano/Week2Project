@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity"
 
 >
@@ -95,12 +96,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textNum3" />
     </LinearLayout>
-<!--<LinearLayout
-    android:id="@+id/fragmentLayout"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
 
-   >-->
     <fragment
         android:id="@+id/fragment"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -111,5 +107,4 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
          />
-<!--</LinearLayout>-->
 </android.support.constraint.ConstraintLayout>
