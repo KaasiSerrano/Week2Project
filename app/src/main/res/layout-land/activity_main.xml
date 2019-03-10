@@ -31,7 +31,6 @@
             android:clickable="true"
             android:focusable="true"
             android:gravity="clip_vertical|center_horizontal"
-            android:paddingTop="16dp"
             android:text="@string/sample_text_1"
             android:textAlignment="center"
             android:textSize="32sp"

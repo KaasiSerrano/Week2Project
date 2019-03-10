@@ -16,8 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="179dp"
-        tools:layout_editor_absoluteY="48dp">
+        >
 
         <TextView
             android:id="@+id/textNum1"
@@ -29,7 +28,6 @@
             android:clickable="true"
             android:focusable="true"
             android:gravity="clip_vertical|center_horizontal"
-            android:paddingTop="16dp"
             android:text="@string/sample_text_1"
             android:textAlignment="center"
             android:textSize="32sp"

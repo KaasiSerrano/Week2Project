@@ -4,6 +4,156 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EditActivity">
+    tools:context=".ProfileActivity">
+
+    <Button
+        android:id="@+id/button_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/save_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0"
+        />
+
+    <Button
+        android:id="@+id/button_faves"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/my_faves_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_bio_field"
+        app:layout_constraintVertical_weight="1"
+        android:textColor="@android:color/darker_gray"
+        android:clickable="false"/>
+
+    <EditText
+        android:id="@+id/tv_name_field"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:hint="@string/name"
+        app:layout_constraintBottom_toTopOf="@+id/tv_age_field"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent=".5"
+        app:layout_constraintVertical_weight="2"
+        android:inputType="textPersonName"/>
+
+    <TextView
+        android:id="@+id/tv_age_field"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/field_age"
+        app:layout_constraintBottom_toTopOf="@+id/tv_gender_field"
+        app:layout_constraintEnd_toEndOf="@+id/tv_name_field"
+        app:layout_constraintStart_toStartOf="@+id/tv_name_field"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name_field"
+        app:layout_constraintVertical_weight="1"/>
+
+    <TextView
+        android:id="@+id/tv_gender_field"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/field_gender"
+        app:layout_constraintBottom_toTopOf="@+id/tv_occupation_field"
+        app:layout_constraintEnd_toEndOf="@+id/tv_name_field"
+        app:layout_constraintStart_toStartOf="@+id/tv_name_field"
+        app:layout_constraintTop_toBottomOf="@+id/tv_age_field"
+        app:layout_constraintVertical_weight="1"/>
+
+    <TextView
+        android:id="@+id/tv_occupation_field"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/field_occupation"
+        app:layout_constraintBottom_toTopOf="@+id/tv_location_field"
+        app:layout_constraintEnd_toEndOf="@+id/tv_name_field"
+        app:layout_constraintStart_toStartOf="@+id/tv_name_field"
+        app:layout_constraintTop_toBottomOf="@+id/tv_gender_field"
+        app:layout_constraintVertical_weight="1"/>
+
+    <TextView
+        android:id="@+id/tv_location_field"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/field_location"
+        app:layout_constraintBottom_toTopOf="@+id/tv_bio_field"
+        app:layout_constraintEnd_toEndOf="@+id/tv_name_field"
+        app:layout_constraintStart_toStartOf="@+id/tv_name_field"
+        app:layout_constraintTop_toBottomOf="@+id/tv_occupation_field"
+        app:layout_constraintVertical_weight="1"/>
+
+    <EditText
+        android:id="@+id/tv_bio_field"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:hint="@string/field_bio"
+        app:layout_constraintBottom_toTopOf="@+id/button_faves"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv_name_field"
+        app:layout_constraintTop_toBottomOf="@+id/tv_location_field"
+        app:layout_constraintVertical_weight="3"
+        android:inputType="textShortMessage"/>
+
+    <EditText
+        android:id="@+id/tv_age"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_gender_field"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_age_field"
+        app:layout_constraintTop_toTopOf="@+id/tv_age_field"
+        android:inputType="number"/>
+
+    <EditText
+        android:id="@+id/tv_gender"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/gender"
+        app:layout_constraintBottom_toTopOf="@+id/tv_occupation_field"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_gender_field"
+        app:layout_constraintTop_toTopOf="@+id/tv_gender_field"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/tv_occupation"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/occupation"
+        app:layout_constraintBottom_toTopOf="@+id/tv_location_field"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_occupation_field"
+        app:layout_constraintTop_toTopOf="@+id/tv_occupation_field"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/tv_location"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/location"
+        app:layout_constraintBottom_toTopOf="@+id/tv_bio_field"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_location_field"
+        app:layout_constraintTop_toTopOf="@+id/tv_location_field"
+        android:inputType="text"/>
 
 </android.support.constraint.ConstraintLayout>
