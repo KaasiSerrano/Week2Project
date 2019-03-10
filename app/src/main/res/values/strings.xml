@@ -10,4 +10,18 @@
     <string name="field_e_mail">E-mail</string>
     <string name="field_password">Password</string>
     <string name="button_log_in">Log In</string>
+    <string name="field_name">Name</string>
+    <string name="field_age">AGE</string>
+    <string name="field_gender">GENDER</string>
+    <string name="field_occupation">OCCUPATION</string>
+    <string name="field_location">LOCATION</string>
+    <string name="field_bio">BIO</string>
+    <string name="name">Name</string>
+    <string name="gender" />
+    <string name="occupation" />
+    <string name="location" />
+    <string name="bio" />
+    <string name="my_faves_button">My Faves</string>
+    <string name="edit_button">Edit</string>
+    <string name="log_out_button">Log Out</string>
 </resources>

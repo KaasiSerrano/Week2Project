@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             favesFragment.changeFocus1();
         }
         else {
-            moveTaskToBack(true);
+            finish();
         }
 
     }

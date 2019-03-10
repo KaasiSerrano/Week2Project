@@ -56,6 +56,7 @@ public class LoginActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences = getSharedPreferences("CREDENTIALS",Context.MODE_PRIVATE);
         String email = sharedPreferences.getString("EMAIL","");
         String password = sharedPreferences.getString("PASSWORD","");
+        etEmail.setText(email);
         if(!email.isEmpty()&&!password.isEmpty()){
             Intent intent = new Intent(this,ProfileActivity.class);
             startActivity(intent);
