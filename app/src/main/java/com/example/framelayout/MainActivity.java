@@ -40,8 +40,12 @@ ImageView profilePic;
 
     @Override
     public void onBackPressed() {
+        if(favesFragment.isorientationLandscape()==true) {
 
-        if (favesFragment.findOutIfVisible()==true)
+                finish();
+            }
+
+        else if (favesFragment.findOutIfVisible()==true)
         {
             favesFragment.changeFocus1();
         }
