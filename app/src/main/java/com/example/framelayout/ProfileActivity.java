@@ -26,6 +26,7 @@ public class ProfileActivity extends AppCompatActivity {
     TextView tvOccupation;
     @BindView(R.id.tv_location)
     TextView tvLocation;
+    private static String CREDENTIALS = "Credentials";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +43,7 @@ public class ProfileActivity extends AppCompatActivity {
             case R.id.button_logout:
                 Intent intent = new Intent(this, LoginActivity.class);
                 startActivity(intent);
-                SharedPreferences sharedPreferences = getSharedPreferences("CREDENTIALS", Context.MODE_PRIVATE);
+                SharedPreferences sharedPreferences = getSharedPreferences(CREDENTIALS, Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.putString("PASSWORD", "");
                 editor.apply();
@@ -50,6 +51,7 @@ public class ProfileActivity extends AppCompatActivity {
                 break;
             case R.id.button_edit:
                 Intent intentEdit = new Intent(this, EditActivity.class);
+                intentEdit.setAction("EDIT");
                 startActivity(intentEdit);
                 break;
             case R.id.button_faves:
@@ -68,7 +70,7 @@ public class ProfileActivity extends AppCompatActivity {
         String location = sharedPreferences.getString("LOCATION", "");
         String bio = sharedPreferences.getString("BIO", "");
 
-        name = "Hello " + name;
+        name = "Hello \n" + name;
         bio = "BIO: " + bio;
         tvNameField.setText(name);
         tvAge.setText(age);

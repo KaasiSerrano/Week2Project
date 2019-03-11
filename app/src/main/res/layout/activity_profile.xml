@@ -4,14 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
     tools:context=".ProfileActivity">
 
     <Button
         android:id="@+id/button_logout"
+        style="@style/Button"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
         android:text="@string/log_out_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,35 +20,35 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0"
-        />
+        app:layout_constraintHeight_percent=".05"/>
 
     <Button
         android:id="@+id/button_edit"
+        style="@style/Button"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
         android:text="@string/edit_button"
-        app:layout_constraintBottom_toBottomOf="@id/button_logout"
-        app:layout_constraintEnd_toStartOf="@+id/button_logout"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintTop_toTopOf="@id/button_logout"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_logout"
+        app:layout_constraintHeight_percent=".05"/>
 
     <Button
         android:id="@+id/button_faves"
+        style="@style/Button"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_margin="8dp"
         android:text="@string/my_faves_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_bio_field"
-        app:layout_constraintVertical_weight="1"/>
+        app:layout_constraintVertical_weight="1" />
 
     <TextView
         android:id="@+id/tv_name_field"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
@@ -57,8 +58,9 @@
         app:layout_constraintHorizontal_bias="0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintWidth_percent=".5"
-        app:layout_constraintVertical_weight="2"/>
+        app:layout_constraintVertical_chainStyle="spread_inside"
+        app:layout_constraintVertical_weight="2"
+        android:textSize="32sp"/>
 
     <TextView
         android:id="@+id/tv_age_field"
@@ -66,10 +68,12 @@
         android:layout_height="0dp"
         android:text="@string/field_age"
         app:layout_constraintBottom_toTopOf="@+id/tv_gender_field"
-        app:layout_constraintEnd_toEndOf="@+id/tv_name_field"
+        app:layout_constraintEnd_toStartOf="@id/tv_age"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintStart_toStartOf="@+id/tv_name_field"
         app:layout_constraintTop_toBottomOf="@+id/tv_name_field"
-        app:layout_constraintVertical_weight="1"/>
+        app:layout_constraintVertical_weight="1"
+        android:textSize="24sp"/>
 
     <TextView
         android:id="@+id/tv_gender_field"
@@ -77,10 +81,11 @@
         android:layout_height="0dp"
         android:text="@string/field_gender"
         app:layout_constraintBottom_toTopOf="@+id/tv_occupation_field"
-        app:layout_constraintEnd_toEndOf="@+id/tv_name_field"
+        app:layout_constraintEnd_toStartOf="@id/tv_gender"
         app:layout_constraintStart_toStartOf="@+id/tv_name_field"
         app:layout_constraintTop_toBottomOf="@+id/tv_age_field"
-        app:layout_constraintVertical_weight="1"/>
+        app:layout_constraintVertical_weight="1"
+        android:textSize="24sp"/>
 
     <TextView
         android:id="@+id/tv_occupation_field"
@@ -88,10 +93,11 @@
         android:layout_height="0dp"
         android:text="@string/field_occupation"
         app:layout_constraintBottom_toTopOf="@+id/tv_location_field"
-        app:layout_constraintEnd_toEndOf="@+id/tv_name_field"
+        app:layout_constraintEnd_toStartOf="@id/tv_occupation"
         app:layout_constraintStart_toStartOf="@+id/tv_name_field"
         app:layout_constraintTop_toBottomOf="@+id/tv_gender_field"
-        app:layout_constraintVertical_weight="1"/>
+        app:layout_constraintVertical_weight="1"
+        android:textSize="24sp"/>
 
     <TextView
         android:id="@+id/tv_location_field"
@@ -99,10 +105,11 @@
         android:layout_height="0dp"
         android:text="@string/field_location"
         app:layout_constraintBottom_toTopOf="@+id/tv_bio_field"
-        app:layout_constraintEnd_toEndOf="@+id/tv_name_field"
+        app:layout_constraintEnd_toStartOf="@id/tv_location"
         app:layout_constraintStart_toStartOf="@+id/tv_name_field"
         app:layout_constraintTop_toBottomOf="@+id/tv_occupation_field"
-        app:layout_constraintVertical_weight="1"/>
+        app:layout_constraintVertical_weight="1"
+        android:textSize="24sp"/>
 
     <TextView
         android:id="@+id/tv_bio_field"
@@ -114,7 +121,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/tv_name_field"
         app:layout_constraintTop_toBottomOf="@+id/tv_location_field"
-        app:layout_constraintVertical_weight="3" />
+        app:layout_constraintVertical_weight="3"
+        android:textSize="24sp"/>
 
     <TextView
         android:id="@+id/tv_age"
@@ -124,7 +132,8 @@
         app:layout_constraintBottom_toTopOf="@+id/tv_gender_field"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tv_age_field"
-        app:layout_constraintTop_toTopOf="@+id/tv_age_field" />
+        app:layout_constraintTop_toTopOf="@+id/tv_age_field"
+        android:textSize="24sp"/>
 
     <TextView
         android:id="@+id/tv_gender"
@@ -135,7 +144,8 @@
         app:layout_constraintBottom_toTopOf="@+id/tv_occupation_field"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tv_gender_field"
-        app:layout_constraintTop_toTopOf="@+id/tv_gender_field" />
+        app:layout_constraintTop_toTopOf="@+id/tv_gender_field"
+        android:textSize="24sp"/>
 
     <TextView
         android:id="@+id/tv_occupation"
@@ -146,7 +156,8 @@
         app:layout_constraintBottom_toTopOf="@+id/tv_location_field"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tv_occupation_field"
-        app:layout_constraintTop_toTopOf="@+id/tv_occupation_field" />
+        app:layout_constraintTop_toTopOf="@+id/tv_occupation_field"
+        android:textSize="24sp"/>
 
     <TextView
         android:id="@+id/tv_location"
@@ -157,6 +168,7 @@
         app:layout_constraintBottom_toTopOf="@+id/tv_bio_field"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tv_location_field"
-        app:layout_constraintTop_toTopOf="@+id/tv_location_field" />
+        app:layout_constraintTop_toTopOf="@+id/tv_location_field"
+        android:textSize="24sp"/>
 
 </android.support.constraint.ConstraintLayout>

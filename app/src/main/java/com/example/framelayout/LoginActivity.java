@@ -9,6 +9,7 @@ import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -21,6 +22,8 @@ public class LoginActivity extends AppCompatActivity {
     @BindView(R.id.button_login)
     Button btnLogin;
     Credentials user1;
+    private static String CREDENTIALS = "Credentials";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,30 +40,35 @@ public class LoginActivity extends AppCompatActivity {
         user1.setEmail(etEmail.getText().toString());
         user1.setPassword(etPassword.getText().toString());
         saveData();
-        if(!etEmail.getText().toString().isEmpty()&&!etPassword.getText().toString().isEmpty()){
-            Intent intent = new Intent(this,ProfileActivity.class);
-            startActivity(intent);
-            finish();
+        if (!etEmail.getText().toString().isEmpty() && !etPassword.getText().toString().isEmpty()) {
+            goToEditActivity();
         }
     }
 
     private void saveData() {
-        SharedPreferences sharedPreferences = getSharedPreferences("CREDENTIALS", Context.MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getSharedPreferences(CREDENTIALS, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString("EMAIL",etEmail.getText().toString());
-        editor.putString("PASSWORD",etPassword.getText().toString());
+        editor.putString("EMAIL", etEmail.getText().toString());
+        editor.putString("PASSWORD", etPassword.getText().toString());
         editor.apply();
         Log.d("Main Activity 2", "Info Saved");
     }
-    private void getData(){
-        SharedPreferences sharedPreferences = getSharedPreferences("CREDENTIALS",Context.MODE_PRIVATE);
-        String email = sharedPreferences.getString("EMAIL","");
-        String password = sharedPreferences.getString("PASSWORD","");
+
+    private void getData() {
+        SharedPreferences sharedPreferences = getSharedPreferences(CREDENTIALS, Context.MODE_PRIVATE);
+        String email = sharedPreferences.getString("EMAIL", "");
+        String password = sharedPreferences.getString("PASSWORD", "");
         etEmail.setText(email);
-        if(!email.isEmpty()&&!password.isEmpty()){
-            Intent intent = new Intent(this,ProfileActivity.class);
-            startActivity(intent);
-            finish();
+        //if email and password are not empty
+        if (!email.isEmpty() && !password.isEmpty()) {
+            goToEditActivity();
         }
+    }
+
+    private void goToEditActivity() {
+        Intent intent = new Intent(this, EditActivity.class);
+        intent.setAction("SETUP");
+        startActivity(intent);
+        finish();
     }
 }

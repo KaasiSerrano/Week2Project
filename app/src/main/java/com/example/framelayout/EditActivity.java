@@ -33,6 +33,10 @@ public class EditActivity extends AppCompatActivity {
         setContentView(R.layout.activity_edit);
         ButterKnife.bind(this);
         getData();
+        //if not editing and at least one field is filled
+        if (!getIntent().getAction().equals("EDIT") && (!etNameField.getText().toString().isEmpty() || !etAge.getText().toString().isEmpty() || !etGender.getText().toString().isEmpty() || !etOccupation.getText().toString().isEmpty() || !etLocation.getText().toString().isEmpty() || !etBioField.getText().toString().isEmpty())) {
+            returnToProfile();
+        }
     }
 
     @OnClick(R.id.button_save)
@@ -54,6 +58,7 @@ public class EditActivity extends AppCompatActivity {
         editor.apply();
         Log.d("Main Activity 2", "Info Saved");
     }
+
     private void getData() {
         SharedPreferences sharedPreferences = getSharedPreferences("PROFILE", Context.MODE_PRIVATE);
         String name = sharedPreferences.getString("NAME", "");
@@ -70,8 +75,9 @@ public class EditActivity extends AppCompatActivity {
         etLocation.setText(location);
         etBioField.setText(bio);
     }
-    private void returnToProfile(){
-        Intent intent = new Intent(this,ProfileActivity.class);
+
+    private void returnToProfile() {
+        Intent intent = new Intent(this, ProfileActivity.class);
         startActivity(intent);
         finish();
     }

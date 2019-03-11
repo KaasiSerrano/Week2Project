@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileActivity">
+    tools:context=".ProfileActivity"
+    android:background="@color/colorPrimary">
 
     <Button
         android:id="@+id/button_save"
@@ -19,22 +20,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0"
+        style="@style/Button"
         />
 
     <Button
         android:id="@+id/button_faves"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_margin="8dp"
         android:text="@string/my_faves_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_bio_field"
         app:layout_constraintVertical_weight="1"
-        android:textColor="@android:color/darker_gray"
-        android:clickable="false"/>
+        android:clickable="false"
+        android:backgroundTint="@android:color/darker_gray"
+        style="@style/Button"/>
 
     <EditText
         android:id="@+id/tv_name_field"
@@ -61,7 +63,9 @@
         app:layout_constraintEnd_toEndOf="@+id/tv_name_field"
         app:layout_constraintStart_toStartOf="@+id/tv_name_field"
         app:layout_constraintTop_toBottomOf="@+id/tv_name_field"
-        app:layout_constraintVertical_weight="1"/>
+        app:layout_constraintVertical_weight="1"
+        android:gravity="center_vertical"
+        />
 
     <TextView
         android:id="@+id/tv_gender_field"
@@ -72,7 +76,9 @@
         app:layout_constraintEnd_toEndOf="@+id/tv_name_field"
         app:layout_constraintStart_toStartOf="@+id/tv_name_field"
         app:layout_constraintTop_toBottomOf="@+id/tv_age_field"
-        app:layout_constraintVertical_weight="1"/>
+        app:layout_constraintVertical_weight="1"
+        android:gravity="center_vertical"
+        />
 
     <TextView
         android:id="@+id/tv_occupation_field"
@@ -83,7 +89,9 @@
         app:layout_constraintEnd_toEndOf="@+id/tv_name_field"
         app:layout_constraintStart_toStartOf="@+id/tv_name_field"
         app:layout_constraintTop_toBottomOf="@+id/tv_gender_field"
-        app:layout_constraintVertical_weight="1"/>
+        app:layout_constraintVertical_weight="1"
+        android:gravity="center_vertical"
+        />
 
     <TextView
         android:id="@+id/tv_location_field"
@@ -94,7 +102,9 @@
         app:layout_constraintEnd_toEndOf="@+id/tv_name_field"
         app:layout_constraintStart_toStartOf="@+id/tv_name_field"
         app:layout_constraintTop_toBottomOf="@+id/tv_occupation_field"
-        app:layout_constraintVertical_weight="1"/>
+        app:layout_constraintVertical_weight="1"
+        android:gravity="center_vertical"
+        />
 
     <EditText
         android:id="@+id/tv_bio_field"
