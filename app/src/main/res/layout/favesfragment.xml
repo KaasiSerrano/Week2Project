@@ -27,10 +27,12 @@
         android:paddingLeft="16dp"
         android:text="jessicarabbit"/>
 
-<ImageView
-    android:id="@+id/profilePic"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center"
-></ImageView>
+    <ImageView
+        android:id="@+id/profilePic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:scaleType="centerInside">
+
+    </ImageView>
 </LinearLayout>
